@@ -33,5 +33,16 @@ class Product extends Model
         return in_array($catId, $this->categories->pluck('id')->toArray());
     }
 
+        /**
+     * Get the path of image
+     */
+    public function imageUrl()
+    {
+        return ($this->featured_image != 'placeholder.jpg') ?
+        asset('storage/featured_images/'.$this->featured_image) :
+        asset('front/assets/img/placeholder.jpg');
+    }
+
+
 
 }

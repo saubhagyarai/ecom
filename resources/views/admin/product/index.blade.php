@@ -55,7 +55,7 @@
                                     <td>
                                         <div class="img-container" style="width: 65px; max-height: 50px; overflow: hidden;
                                         display: block;">
-                                        <img src="{{asset('/storage/featured_images/'.$product->featured_image)}}" alt="...">
+                                        <img src="{{$product->imageUrl()}}" alt="...">
                                         </div>
                                     </td>
                                         <td>                                                

@@ -133,7 +133,7 @@
                         <div class="product-wrapper">
                             <div class="product-img-4">
                                 <a href="{{route('product.single', $product->slug)}}">
-                                <img src="{{asset('storage/featured_images/'.$product->featured_image)}}" alt="">
+                                <img src="{{$product->imageUrl()}}" alt="">
                                 </a>
 
                                 @if ($product->sale_price)                
@@ -223,7 +223,7 @@
                     <div class="product-wrapper mb-6">
                         <div class="product-img-4">
                             <a href="{{route('product.single', $product->slug)}}">
-                                <img src="{{asset('storage/featured_images/'.$product->featured_image)}}" alt="">
+                                <img src="{{$product->imageUrl()}}" alt="">
                             </a>
                             @if ($product->sale_price)
                                                 
@@ -329,7 +329,7 @@
                                         <div class="product-wrapper product-border mb-24">
                                             <div class="product-img-3">
                                                 <a href="{{route('product.single', $product->slug)}}">
-                                                    <img src="{{asset('storage/featured_images/'.$product->featured_image)}}" alt="">
+                                                    <img src="{{$product->imageUrl()}}" alt="">
                                                 </a>
                                                 
                                                 @if ($product->sale_price)
@@ -441,7 +441,7 @@
                     <div class="product-img-5">
                         <a href="{{route('product.single', $product->slug)}}">
                             <img
-                                src="{{asset('storage/featured_images/'.$product->featured_image)}}"
+                                src="{{$product->imageUrl()}}"
                                 alt=""
                             />
                         </a>
