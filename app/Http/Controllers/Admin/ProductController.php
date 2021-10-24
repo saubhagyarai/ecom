@@ -50,6 +50,7 @@ class ProductController extends Controller
      */
     public function store(CreateProductRequest $request)
     {
+        // dd($request->all());
         if ($request->sale_price > $request->price) 
         {
             return back()->with('fail', 'Product sale price must be less than actual price.');
@@ -93,6 +94,10 @@ class ProductController extends Controller
 
             $product_images[] = $filenameToStoreProductImg;
             }
+        }
+        else
+        {
+            $product_images = NULL;
         }
 
         $product = Product::create([
